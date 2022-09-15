@@ -52,3 +52,23 @@ bot.start() #ligando o bot
 bot.stop() #parando o bot
 bot.restart() #reiniciando o bot
 ```
+
+- **Coletando os logs:**
+
+> usando a função `logs()` o sistema ira fazer um request na API e a função ira retorna as ultimas 5 logs do seu bot
+
+- **Nota:**
+> ultilizando `log_complete()` a função ira retorna um link pro site da squarecloud com todas as logs do bot
+
+```py
+from squarecloud_py import app
+
+id_app = ''
+key_api = ''
+
+bot = app.Client(id_app=id_app, key_api=key_api) #Se conectando a squarecloud
+
+print(bot.logs()) #ou log_complete
+```
+
+**Para mais exemplos veja esse [repositorio](https://github.com/4str0x/squareapi-py-exemplos-):**

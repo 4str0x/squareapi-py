@@ -4,7 +4,7 @@ with open("README.md", "r") as arq:
     readme = arq.read()
 
 setup(name='squareapi_py',
-    version='0.0.2',
+    version='0.0.3',
     license='MIT License',
     author='Astro',
     long_description=readme,
