@@ -1,4 +1,4 @@
-Squareapi-py 0.0.4
+# Squareapi-py 0.0.4
 
 pt-br : biblioteca não oficial da [squarecloud](https://squarecloud.app).
 en: [squarecloud](https://squarecloud.app) unofficial library.
