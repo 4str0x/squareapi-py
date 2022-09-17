@@ -1,4 +1,4 @@
-# ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Squareapi-py 0.0.4
+Squareapi-py 0.0.4
 
 pt-br : biblioteca não oficial da [squarecloud](https://squarecloud.app).
 en: [squarecloud](https://squarecloud.app) unofficial library.
@@ -28,7 +28,7 @@ após a instalação da biblioteca você ira seguir para proxima etapa
 
 - **Se conectando a api:**
 
-> para se conectar a api você ira importar a lib no seu projeto com `from squarecloud_py import app` logo após, ira passar o id do seu bot junto com a ky_api que você pegou mais cedo.
+> para se conectar a api você ira importar a lib no seu projeto com `from squarecloud_py import app` logo após, ira passar o id do seu bot junto com a key_api que você pegou mais cedo.
 
 > Usando a função `Client()` iremos enviar as informações para se conectar.
 
