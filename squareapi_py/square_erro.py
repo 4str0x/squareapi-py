@@ -13,7 +13,6 @@ colorama.init(autoreset=True)
     * tratar_error --> trata todos os erros da função principal
 """
 
-
 class error():
     def __init__(self, error):
         self.teste = error

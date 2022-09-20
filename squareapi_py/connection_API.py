@@ -1,9 +1,8 @@
 # squarecloud unofficial API module
 
 #=================================== Imports ======================================#
-
-import requests
-import json
+import asyncio
+import aiohttp
 
 from . import square_erro
 #===================================================================================#
@@ -15,32 +14,26 @@ from . import square_erro
     * R_POST --> faz requisições com o metado POST a api
 """
 
-
 class square_connection():
     def __init__(self, url, key_api):
         self.url = url
         self.key_api = key_api
+        self.loop = asyncio.get_event_loop()
            
     def R_GET(self):
-        headers = {"Authorization": f"{self.key_api}"}
-        response = requests.get(self.url, headers=headers)
-        response_json = json.loads(response.text)
-        
-        if response_json['status'] == 'error':
-            Error_Handling = square_erro.error(error=response_json['code'])
-                
-            return Error_Handling.tratar_erro()
-        
-        return response_json
+        return self.loop.run_until_complete(self._R_GET())
     
     def R_POST(self):
-        headers = {"Authorization": f"{self.key_api}"}
-        response = requests.post(self.url, headers=headers)
-        response_json = json.loads(response.text)
-        
-        if response_json['status'] == 'error':
-            Error_Handling = square_erro.error(error=response_json['code'])
-                
-            return Error_Handling.tratar_erro()
-        
-        return response_json['status']
+        return self.loop.run_until_complete(self._R_POST())
+    
+    async def _R_GET(self):
+        async with aiohttp.ClientSession() as session:
+            params = {"Authorization": f"{self.key_api}"}
+            async with session.get(self.url, headers=params) as resp: 
+                return await resp.json()
+            
+    async def _R_POST(self):
+        async with aiohttp.ClientSession() as session:
+            params = {"Authorization": f"{self.key_api}"}
+            async with session.post(self.url, headers=params) as resp: 
+                return await resp.json()

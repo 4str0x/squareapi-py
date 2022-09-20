@@ -19,19 +19,9 @@ url_base = 'https://api.squarecloud.app/v1/public/'
     data-de-modificação: 17/09/2022
 """
 
+
 class Client():
-    def __init__(self, 
-                 key_api, 
-                 id_app
-                 ): 
-        
-        """
-            classe Client que recolher os paramentros necessarios para que a lib funcione corretamente
-            
-                * key_api
-                * id_app
-        """
-        
+    def __init__(self, key_api, id_app): 
         self.key_api = key_api
         self.id_app = id_app
         
@@ -179,7 +169,7 @@ class Client():
             return --> msg de sucesso
         """
         
-        url = f'{url_base}stop/{self.id_app}'
+        url = f'{url_base}restart/{self.id_app}'
         response = connection_API.square_connection(url=url, key_api= self.key_api)
         response.R_POST()
         
