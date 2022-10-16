@@ -5,13 +5,6 @@ pt-br : biblioteca não oficial da [squarecloud](https://squarecloud.app).
 
 en: [squarecloud](https://squarecloud.app) unofficial library.
 
-
-**O que há de novo?:**
---------
-- Agora a lib trabalha com funções asyncs para melhor desenpenho nos bots do discord
-- foi refeito todo codigo da lib para melhor desenpenho e rapida manutenção (caso precise)
-
-
 **Key_api:**
 --------
 
