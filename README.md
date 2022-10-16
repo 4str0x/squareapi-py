@@ -1,4 +1,4 @@
-# Squareapi-py 0.0.5
+# Squareapi-py 0.0.6
 
 pt-br : biblioteca não oficial da [squarecloud](https://squarecloud.app).
 
